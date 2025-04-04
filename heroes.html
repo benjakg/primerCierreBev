@@ -1,12 +1,85 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lista de Héroes</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      *{background-color: rgb(219, 219, 219);}
+        .heroe{
+            background-color: rgb(255, 255, 255);
+            margin: 10px;
+            padding: 10px;
+
+        }
+        table {
+    background-color: rgb(255, 255, 255);
+    text-align: left;
+    }
+
   
+        
+        th{background-color: white;}
+        p,strong,h3{background-color: white;}
+        img{
+          border-radius: 10px;
+        
+        }
+    
+    </style>
 </head>
 <body>
     
+    <div id="datosHeroes">
+    <h1>Heroes Registro</h1>  
+  
+    </div>
+
+    <script>
+        fetch('js/heroes.json')
+            .then(response => response.json())
+            .then(data => {
+                let heroes = data.Hero; //todos los heroes
+                let contenedor = document.getElementById('datosHeroes');
+       
+                for(let i=0;i<heroes.length;i++){
+
+                    let heroe = heroes[i];
+
+                    let divHeroe = document.createElement('div'); //crear el div del heroe
+                    divHeroe.classList.add('heroe');
+
+                    divHeroe.innerHTML = `
+    <table> 
+        <tr >
+            <th rowspan="4"><img src="${heroe.foto}" width="100"></th>
+            <th><h3>${heroe.nombre}</h3></th>
+        </tr>
+        <tr>
+            <th><p><strong>Liga:</strong> ${heroe.liga}</p></th>
+        </tr>
+        <tr>
+            <th><p><strong>Nivel de Poder:</strong> ${heroe.nivelPoder}</p></th>
+        </tr>
+        <tr>
+            <th><p><strong>Poderes:</strong> ${heroe.poderes}</p></th>
+        </tr>
+    </table>
+`;
+
+                                     
+                                   
+
+ 
+
+                                
+
+                    contenedor.appendChild(divHeroe);
+
+                }
+            })
+            .catch(error => console.error('Error de carga'), error);
+    </script>
+
 </body>
 </html>

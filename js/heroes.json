@@ -5,7 +5,7 @@
         "liga": "Marvel",
         "nivelPoder": 7,
         "poderes": ["tecnologia", "rayo laser", "dinero"],
-        "foto": "https://image.api.playstation.com/vulcan/img/rnd/202010/2716/M2WqznjK7MWhViJNteq0TE3I.png"
+        "foto": "https://th.bing.com/th/id/OIP.Voq6PP8k7dReH-ZfQKZ62wHaLH?rs=1&pid=ImgDetMain"
       },
       {
         "nombre": "Hulk",
@@ -47,14 +47,14 @@
         "liga": "Marvel",
         "nivelPoder": 8,
         "poderes": ["Telarañas", "Agilidad", "Sentido arácnido"],
-        "foto": "https://upload.wikimedia.org/wikipedia/en/0/0c/Spiderman50.jpg"
+        "foto": "https://pics.filmaffinity.com/spider_man_3-729921442-large.jpg"
       },
       {
         "nombre": "Flash",
         "liga": "DC",
         "nivelPoder": 8,
         "poderes": ["Supervelocidad", "Viajar en el tiempo"],
-        "foto": "https://upload.wikimedia.org/wikipedia/en/e/ea/Barry_Allen_Flash_%28DC_Rebirth%29.png"
+        "foto": "https://th.bing.com/th/id/OIP.qJUQKQNacKoMPNJL4RAdEgHaK-?rs=1&pid=ImgDetMain"
       }
     ]
   }
